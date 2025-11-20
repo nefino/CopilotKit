@@ -7,20 +7,25 @@ description = "Implementation of the AG-UI protocol for LangGraph."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
-files = [
-    {file = "ag_ui_langgraph-0.0.14-py3-none-any.whl", hash = "sha256:6b66dda5f7f8218ef1f766101baf2e03273aa07ad9bb8f8fd45639d3f5637f33"},
-    {file = "ag_ui_langgraph-0.0.14.tar.gz", hash = "sha256:4f8c090f94ac25eadbac785c2caf695efaad0f6b4dd30b716a596662a4e3b473"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-ag-ui-protocol = "0.1.9"
-fastapi = {version = ">=0.115.12,<0.116.0", optional = true, markers = "extra == \"fastapi\""}
+ag-ui-protocol = "==0.1.9"
+fastapi = {version = ">=0.115.0,<0.117.0", optional = true}
 langchain = ">=0.3.0"
 langchain-core = ">=0.3.0"
 langgraph = ">=0.3.25,<1.1.0"
 
 [package.extras]
-fastapi = ["fastapi (>=0.115.12,<0.116.0)"]
+fastapi = ["fastapi (>=0.115.0,<0.117.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/nefino/ag-ui.git"
+reference = "2445ecd36aa835e158c86dd64f16aba0fa541e23"
+resolved_reference = "2445ecd36aa835e158c86dd64f16aba0fa541e23"
+subdirectory = "typescript-sdk/integrations/langgraph/python"
 
 [[package]]
 name = "ag-ui-protocol"
@@ -5441,4 +5446,4 @@ crewai = ["crewai"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.13"
-content-hash = "de6bd53ae27075a92a670c9e1653b5179c6130be902e5099ed3a1b97324e7e1e"
+content-hash = "2951b74ccad371de30d3721a5462d26ce66f270577648289d9ad3756cf35dfaf"
